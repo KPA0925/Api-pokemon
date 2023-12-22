@@ -1,0 +1,166 @@
+/* Estilos generales para la pagina principal */
+* {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+
+/* Estilos para el contenedor la pagina principal */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+main ul{
+    text-align: center;
+}
+
+
+main ul li h3 {
+    padding: 10px 10px;
+}
+
+h2 {
+    font-size: 70px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+/* Estilos para los formularios de la pagina principal */
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button[type="submit"] {
+    background-color: #007bff; /* Azul en lugar de rojo */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3; /* Un tono más oscuro de azul */
+}
+
+/* Estilos para el enlace de registro */
+p {
+    text-align: center;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para las tarjetas de Pokémon */
+.pokemon-card {
+    border: 2px solid #000000;
+    padding: 20px 10px;
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+    width: 17.26%;
+}
+
+/* Estilo para el botón "Ver Pokemon" */
+.ver-pokemon-btn {
+    background-color: #007bff; /* Azul en lugar de rojo */
+    color: #fff;
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.ver-pokemon-btn:hover {
+    background-color: #0056b3; /* Un tono más oscuro de azul */
+}
+
+/* Estilos para la img de la pokebola de la pagina principal */
+.pokemon-card img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+/* Estilos para la barra de navegacion en la pagina*/
+nav {
+    background-color: #0056b3; /* Un tono más oscuro de azul */
+    padding: 25px 25px;
+    margin-top: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    background-color: #fff; /* Blanco en lugar de negro */
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 25%;
+    display: inline-block;
+    margin: 10px;
+}
+
+nav ul li:hover {
+    padding: 15px 25px;
+    cursor: pointer;
+    background-color: #007bff; /* Azul en lugar de verde */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    font-weight: bold;
+    box-shadow: 0 0 10px #007bff; /* Azul en lugar de verde */
+}
+
+/* Estilos para el pie de pagina de la pagina principal */
+footer {
+    background-color: #e0e0e0;
+    padding: 50px 50px;
+    color: black;
+    margin-top: 30px;
+}
+
+footer p {
+    font-weight: bold;
+    font-size: 20px;
+}

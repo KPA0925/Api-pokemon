@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <meta name = "despcription" content="Pagina principal">
+    <meta name="keywords" content="pokemon, caricaturas, monstruos">
+    <meta name="author" content="Kevin Piedrahita Arismendi">
+</head>
+<body>
+
+    <main>
+        <br><br>
+        <h2>Mira la información de los Pokemones</h2>
+        <br>
+
+        <ul class="pokemon-list">
+            {% for resultado in resultados %}
+                <li class="pokemon-card">
+                    <img src="{% static 'img/pokebola.png' %}" alt="Pokebola">
+                    <h3>{{ resultado.name }}</h3>
+                    <a href="{% url 'visualizar_pokemon' resultado.name %}" class="ver-pokemon-btn">Ver información</a>
+                </li>
+            {% endfor %}
+        </ul> 
+    </main>
+
+    <nav>
+        <ul>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'cerrar_sesion' %}">Cerrar Sesión</a></li>
+                <form action="{% url 'cerrar_sesion' %}" method="post" id="logout-form">
+                    {% csrf_token %}
+                </form>
+            {% else %}
+                <li><a href="{% url 'inicio_sesion' %}">Iniciar Sesión</a></li>
+                <li><a href="{% url 'registro_usuario' %}">Registrarse</a></li> 
+            {% endif %}
+        </ul>
+    </nav>
+
+    <footer>
+        <p>&copy; {{ year }} Kevin Piedrahita Arismendi. Derechos reservados.</p>
+    </footer>
+</body>
+</html>

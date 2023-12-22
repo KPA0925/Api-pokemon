@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="{% static 'u_registro.css' %}">
+    <meta name = "despcription" content="Registro de usuario">
+    <meta name="keywords" content="pokemon, caricaturas, monstruos">
+    <meta name="author" content="Kevin Piedrahita Arismendi">
+</head>
+<body>
+    <div class="header"></div>
+
+    <div class="container">
+        <h2>Registro</h2>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Registrarse</button>
+        </form>
+        <p>¿Ya tienes cuenta? <a href="{% url 'inicio_sesion' %}">Inicia sesión</a></p>
+    </div>
+
+    <div class="footer"></div>
+</body>
+</html>
